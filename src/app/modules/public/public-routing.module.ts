@@ -14,6 +14,10 @@ const routes: Routes = [
       {
         path: 'produtos',
         loadChildren: './modules/fm-produtos/fm-produtos.module#FmProdutosModule'
+      },
+      {
+        path: 'categorias',
+        loadChildren: './modules/fm-categorias/fm-categorias.module#FmCategoriasModule'
       }
     ]
   }

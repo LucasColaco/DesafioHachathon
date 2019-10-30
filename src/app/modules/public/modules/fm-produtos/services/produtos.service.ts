@@ -14,8 +14,16 @@ export class ProdutosService {
     return this.http.get<ProdutosModel[]>('http://localhost:3000/produtos');
   }
 
-  cadastrar(modelo: ProdutosModel): Observable<any> {
-    return this.http.post<any>('http://localhost:3000/produtos', modelo);
+  cadastrar(modelo: ProdutosModel): Observable<ProdutosModel> {
+    return this.http.post<ProdutosModel>('http://localhost:3000/produtos', modelo);
+  }
+
+  atualizar(modelo: ProdutosModel, id: number): Observable<ProdutosModel> {
+    return this.http.put<ProdutosModel>('http://localhost:3000/produtos' + id, modelo)
+  }
+
+  delete(id: number): Observable<ProdutosModel>{
+    return this.http.delete<ProdutosModel>('http://localhost:3000/produtos' + id)
   }
 
 }

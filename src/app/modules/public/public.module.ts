@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 import { SharedComponentsModule } from 'src/app/shared/shared-components/shared-components.module';
 import { HomeComponent } from './components/home/home.component';
 import { PublicRoutingModule } from './public-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { Validators} from '@angular/forms'
+
+
 
 
 @NgModule({
@@ -12,7 +16,7 @@ import { PublicRoutingModule } from './public-routing.module';
   imports: [
     CommonModule,
     SharedComponentsModule,
-    PublicRoutingModule
+    PublicRoutingModule,
   ]
 })
 export class PublicModule { }

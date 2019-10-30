@@ -17,7 +17,7 @@
         <td>{{produto.valor | currency:'BRL':true}}</td>
         <td>
           <button class="btn btn-danger btn-sm mr-2">Remover</button>
-          <button class="btn btn-primary btn-sm">Editar</button>
+          <button class="btn btn-primary btn-sm" [routerLink] = "['editar', produto.id]">Editar</button>
         </td>
       </tr>
     </tbody>
